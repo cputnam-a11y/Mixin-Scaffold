@@ -70,7 +70,7 @@ class MixinCoprocessorNestHost extends MixinCoprocessor {
     }
     
     @Override
-    String getName() {
+    public String getName() {
         return "nesthost";
     }
 

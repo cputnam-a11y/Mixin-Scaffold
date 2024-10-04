@@ -53,7 +53,7 @@ class MixinCoprocessorSyntheticInner extends MixinCoprocessor {
     }
     
     @Override
-    String getName() {
+    public String getName() {
         return "syntheticinner";
     }
     

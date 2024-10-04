@@ -44,7 +44,7 @@ class MixinCoprocessorPassthrough extends MixinCoprocessor {
     }
     
     @Override
-    String getName() {
+    public String getName() {
         return "passthrough";
     }
 
