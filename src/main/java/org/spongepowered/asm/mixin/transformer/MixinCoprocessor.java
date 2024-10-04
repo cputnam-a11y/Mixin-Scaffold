@@ -43,7 +43,7 @@ import org.spongepowered.asm.mixin.transformer.MixinConfig.IListener;
  * called <tt>MixinPostProcessor</tt>, but the mixture of responsibilities of
  * that class made its role unclear and slightly schizophrenic.</p>
  */
-abstract class MixinCoprocessor implements IListener {
+public abstract class MixinCoprocessor implements IListener {
     
     /**
      * The result of a specific coprocessor's action on a supplied class,
@@ -54,7 +54,7 @@ abstract class MixinCoprocessor implements IListener {
      * processing by the mixin pipeline: Results with <tt>passthrough</tt> set
      * will <b>not</b> be processed further by the mixin processor.   
      */
-    enum ProcessResult {
+    public enum ProcessResult {
         
         /**
          * This coprocessor does not take any action for the specified class 
@@ -121,7 +121,7 @@ abstract class MixinCoprocessor implements IListener {
     /**
      * Coprocessor name, for debugging only
      */
-    abstract String getName();
+    protected abstract String getName();
 
     /* (non-Javadoc)
      * @see org.spongepowered.asm.mixin.transformer.MixinConfig.IListener
