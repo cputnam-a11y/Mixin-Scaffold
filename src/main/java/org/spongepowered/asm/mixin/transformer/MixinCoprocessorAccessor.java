@@ -86,7 +86,7 @@ class MixinCoprocessorAccessor extends MixinCoprocessor {
     }
 
     @Override
-    ProcessResult process(String className, ClassNode classNode) {
+    protected ProcessResult process(String className, ClassNode classNode) {
         if (!MixinEnvironment.getCompatibilityLevel().supports(LanguageFeatures.METHODS_IN_INTERFACES)
                     || !this.accessorMixins.containsKey(className)) {
             return ProcessResult.NONE;
