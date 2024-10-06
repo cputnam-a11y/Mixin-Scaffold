@@ -60,7 +60,7 @@ class MixinCoprocessorPassthrough extends MixinCoprocessor {
     }
     
     @Override
-    ProcessResult process(String className, ClassNode classNode) {
+    protected ProcessResult process(String className, ClassNode classNode) {
         return this.loadable.contains(className) ? ProcessResult.PASSTHROUGH_NONE : ProcessResult.NONE;
     }
 
