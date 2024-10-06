@@ -149,7 +149,7 @@ public abstract class MixinCoprocessor implements IListener {
      * @return result indicating whether the class was transformed, and whether
      *      or not to passthrough instead of apply mixins
      */
-    ProcessResult process(String className, ClassNode classNode) {
+    protected ProcessResult process(String className, ClassNode classNode) {
         return ProcessResult.NONE;
     }
 
