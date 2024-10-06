@@ -74,7 +74,7 @@ class MixinCoprocessorSyntheticInner extends MixinCoprocessor {
      * new home in the target class
      */
     @Override
-    ProcessResult process(String className, ClassNode classNode) {
+    protected ProcessResult process(String className, ClassNode classNode) {
         if (!this.syntheticInnerClasses.contains(className)) {
             return ProcessResult.NONE;
         }
